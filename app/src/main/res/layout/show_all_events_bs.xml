@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/parent_col_bs"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="170dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:foregroundGravity="center" />
+
+        <LinearLayout
+            android:id="@+id/ll_events_show_all_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line1"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="start"
+                android:text="Events"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.5"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="start|center"
+                android:text="Recommended"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:foregroundGravity="center"
+                android:src="@drawable/baseline_blur_on_24" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.01mm"
+            android:layout_below="@+id/ll_events_show_all_heading"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            tools:ignore="InOrMmUsage" />
+
+        <RelativeLayout
+            android:id="@+id/rl_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_show_all_bs_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="8dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/black"
+            tools:ignore="InOrMmUsage" />
+
+    <RelativeLayout
+        android:id="@+id/rl_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line3">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_show_all_bs_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/bottomSheetContainer"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    app:behavior_hideable="true"-->
+    <!--    android:background="@drawable/rounded_edt_txt_bg"-->
+    <!--    android:backgroundTint="@color/white"-->
+    <!--    android:layout_marginStart="20dp"-->
+    <!--    android:layout_marginEnd="20dp"-->
+    <!--    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">-->
+
+    <!--    <View-->
+    <!--        android:layout_width="30dp"-->
+    <!--        android:layout_height="4dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:background="@color/black"/>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:weightSum="10">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="3"-->
+    <!--            android:gravity="start"-->
+    <!--            android:text="Events"-->
+    <!--            android:fontFamily="@font/poppins_bold"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="28sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="5.5"-->
+    <!--            android:fontFamily="@font/poppins_bold"-->
+    <!--            android:gravity="start|center"-->
+    <!--            android:text="Recommended"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_weight="1.5"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:foregroundGravity="center"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:src="@drawable/baseline_blur_on_24"/>-->
+
+
+    <!--    </LinearLayout>-->
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0.01mm"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        tools:ignore="InOrMmUsage" />-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rv_show_all_bs_horizontal"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="8dp" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        tools:ignore="InOrMmUsage" />-->
+
+    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:fillViewport="true"-->
+    <!--        >-->
+
+    <!--        <androidx.core.widget.NestedScrollView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/rv_show_all_bs_vertical"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:padding="8dp" />-->
+
+    <!--        </androidx.core.widget.NestedScrollView>-->
+
+    <!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+
+    <!--</LinearLayout>-->

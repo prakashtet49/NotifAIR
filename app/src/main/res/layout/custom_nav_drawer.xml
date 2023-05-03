@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCustomNavDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Browse"
+                                android:layout_marginStart="15dp"
+                                android:textColor="@color/grey"
+                                android:fontFamily="@font/poppins_bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/black"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"/>
+
+                            <!-- buttons in nav -->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_home"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_home_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_home"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Home"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_channel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_channel"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_wifi_channel_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_channel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Channels"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_news"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_news"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_search_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_news"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="News"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_bookmarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_bookmarks"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_bookmarks_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_bookmarks"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Bookmarks"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_help"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_help"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_support_agent_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_help"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Help"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="AIR"
+                                android:textColor="@color/grey"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/black"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"/>
+
+                            <!-- buttons in nav -->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_reminders"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_reminders"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_home_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_reminders"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Reminders"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_history"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_search_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_history"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="History"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_control_center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_control_center"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_bookmarks_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_control_center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Control Center"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Profile"
+                                android:textColor="@color/grey"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/poppins_bold"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/black"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"/>
+
+                            <!-- buttons in nav -->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_view_item_accounts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="2dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="4dp"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_accounts"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/baseline_home_24" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item_accounts"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Account"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_view_item_logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:cardElevation="2dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/gradient_logout_bg"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/ll_item_logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:layout_marginStart="10dp"
+                                    android:src="@drawable/baseline_logout_24" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:text="LOGOUT"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="45dp"
+            app:cardBackgroundColor="#FEF9DB"
+            app:cardCornerRadius="7dp"
+            app:cardUseCompatPadding="true"
+            android:elevation="20dp"
+            app:strokeColor="#FFC50A"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_drawer_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:padding="4dp"
+                        app:cardCornerRadius="8dp"
+                        >
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/app_logo" />
+
+                    </androidx.cardview.widget.CardView>
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:fontFamily="@font/poppins_bold"-->
+<!--                        android:layout_marginStart="20dp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:text="Fair Notifications on AIR" />-->
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/baseline_close_24" />
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+</FrameLayout>

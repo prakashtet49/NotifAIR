@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "195123777390",
+    "project_id": "notifair-beta",
+    "storage_bucket": "notifair-beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195123777390:android:eccfc53c6761e587633b7f",
+        "android_client_info": {
+          "package_name": "ai.app.notifair"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195123777390-6i8r9686080vl21itt6e2l31oplasgmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_J7GaTMGP8XKhBXvQv4py7RDysUQqxfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195123777390-6i8r9686080vl21itt6e2l31oplasgmf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "195123777390-quch4oqtdtvp8v357k5j1v2tgcg19t98.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.notifair-beta"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
